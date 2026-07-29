@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b1016;
+  --background-elevated: #10161f;
+  --foreground: #f3f2f6;
+  --muted: #9aa1b2;
+  --border: #1f2836;
+  --pink: #ec4899;
+  --violet: #8b5cf6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-pink: var(--pink);
+  --color-violet: var(--violet);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+::selection {
+  background: var(--pink);
+  color: #0b1016;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-ring {
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(236, 72, 153, 0.18),
+      transparent 45%
+    ),
+    radial-gradient(circle at 80% 0%, rgba(139, 92, 246, 0.18), transparent 45%);
+}
+
+.gradient-border {
+  position: relative;
+  border: 1px solid var(--border);
+}
+
+.gradient-border:hover {
+  border-color: rgba(236, 72, 153, 0.4);
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+}
+
+.btn-gradient:hover {
+  filter: brightness(1.08);
+}
+
+.prose-bloom {
+  color: var(--foreground);
+}
+
+.prose-bloom h1,
+.prose-bloom h2,
+.prose-bloom h3 {
+  color: var(--foreground);
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+}
+
+.prose-bloom h1 {
+  font-size: 2rem;
+}
+
+.prose-bloom h2 {
+  font-size: 1.5rem;
+}
+
+.prose-bloom h3 {
+  font-size: 1.2rem;
+}
+
+.prose-bloom p {
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 1.25em;
+}
+
+.prose-bloom a {
+  color: #f0abfc;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-bloom ul,
+.prose-bloom ol {
+  color: var(--muted);
+  margin-bottom: 1.25em;
+  padding-left: 1.5em;
+}
+
+.prose-bloom li {
+  margin-bottom: 0.4em;
+}
+
+.prose-bloom li::marker {
+  color: var(--pink);
+}
+
+.prose-bloom strong {
+  color: var(--foreground);
+}
+
+.prose-bloom code {
+  background: var(--background-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.9em;
+}
+
+.prose-bloom blockquote {
+  border-left: 2px solid var(--pink);
+  padding-left: 1em;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.25em;
+}
