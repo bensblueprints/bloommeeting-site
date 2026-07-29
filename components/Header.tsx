@@ -33,7 +33,7 @@ export default function Header() {
           href={WHOP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-gradient rounded-full px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-pink/10 transition"
+          className="btn-gradient flex min-h-11 items-center rounded-full px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-pink/10 transition"
         >
           Buy once — {SITE.priceDisplay}
         </a>

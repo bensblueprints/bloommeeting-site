@@ -12,7 +12,7 @@ const INCLUDED = [
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="mx-auto max-w-6xl px-6 py-24">
+    <section id="pricing" className="mx-auto max-w-6xl px-6 py-14 sm:py-24">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
           One price. <span className="gradient-text">Own it forever.</span>
@@ -23,7 +23,7 @@ export default function PricingSection() {
         </p>
       </div>
 
-      <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
+      <div className="mx-auto mt-12 grid max-w-4xl items-start gap-6 sm:grid-cols-2">
         <div className="gradient-border gradient-ring rounded-2xl bg-background-elevated p-8">
           <div className="flex items-baseline gap-2">
             <span className="text-5xl font-bold">{SITE.priceDisplay}</span>

@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { SITE, WHOP_URL } from "@/lib/config";
 
 type GithubAsset = {
@@ -193,9 +195,11 @@ export default function DownloadClient() {
               <h3 className="text-sm font-semibold text-foreground">
                 What&apos;s in this release
               </h3>
-              <pre className="mt-3 whitespace-pre-wrap font-sans text-sm leading-relaxed text-muted">
-                {latest.body}
-              </pre>
+              <div className="prose-bloom prose-sm mt-3">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {latest.body}
+                </ReactMarkdown>
+              </div>
             </div>
           )}
         </div>

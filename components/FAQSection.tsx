@@ -3,7 +3,7 @@ import { faqJsonLd } from "@/lib/jsonld";
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="mx-auto max-w-3xl px-6 py-24">
+    <section id="faq" className="mx-auto max-w-3xl px-6 py-14 sm:py-24">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd()) }}

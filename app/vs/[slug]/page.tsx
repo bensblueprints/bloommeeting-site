@@ -121,25 +121,34 @@ export default async function VsPage({
         <h2 className="text-2xl font-bold tracking-tight">
           The one-time vs subscription math
         </h2>
-        <div className="mt-6 overflow-x-auto rounded-xl border border-border">
+        <p className="mt-6 text-xs text-muted sm:hidden">
+          Scroll sideways to see {competitor.name} &rarr;
+        </p>
+        <div className="mt-3 overflow-x-auto rounded-xl border border-border sm:mt-6">
           <table className="w-full min-w-[480px] text-left text-sm">
             <thead className="bg-background-elevated text-muted">
               <tr>
-                <th className="px-4 py-3 font-medium">Timeframe</th>
+                <th className="sticky left-0 z-10 bg-background-elevated px-4 py-3 font-medium">
+                  Timeframe
+                </th>
                 <th className="px-4 py-3 font-medium">{SITE.name}</th>
                 <th className="px-4 py-3 font-medium">{competitor.name}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
               <tr>
-                <td className="px-4 py-3 text-muted">Up front</td>
+                <td className="sticky left-0 z-10 bg-background-elevated px-4 py-3 text-muted">
+                  Up front
+                </td>
                 <td className="px-4 py-3 font-medium">
                   {SITE.priceDisplay}
                 </td>
                 <td className="px-4 py-3 font-medium">$0</td>
               </tr>
               <tr>
-                <td className="px-4 py-3 text-muted">Year 1</td>
+                <td className="sticky left-0 z-10 bg-background-elevated px-4 py-3 text-muted">
+                  Year 1
+                </td>
                 <td className="px-4 py-3 font-medium">
                   {SITE.priceDisplay}
                 </td>
@@ -148,14 +157,18 @@ export default async function VsPage({
                 </td>
               </tr>
               <tr>
-                <td className="px-4 py-3 text-muted">Year 3</td>
+                <td className="sticky left-0 z-10 bg-background-elevated px-4 py-3 text-muted">
+                  Year 3
+                </td>
                 <td className="px-4 py-3 font-medium">{SITE.priceDisplay}</td>
                 <td className="px-4 py-3 font-medium">
                   ${threeYearCompetitor}
                 </td>
               </tr>
               <tr>
-                <td className="px-4 py-3 text-muted">Breakeven point</td>
+                <td className="sticky left-0 z-10 bg-background-elevated px-4 py-3 text-muted">
+                  Breakeven point
+                </td>
                 <td className="px-4 py-3 font-medium text-pink" colSpan={2}>
                   {breakevenMonths < 1
                     ? "Immediately"
