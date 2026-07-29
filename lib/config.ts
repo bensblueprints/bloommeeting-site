@@ -6,7 +6,7 @@ export const SITE = {
   tagline: "The Riverside.fm replacement you buy once.",
   description:
     "Bloom Meeting is a desktop app for recording remote podcast guests in studio quality. Guests join from a browser link, everyone records locally, and you own the app forever for $49 — no monthly bill.",
-  url: "https://bloommeeting.advancedmarketing.co",
+  url: "https://bloommeeting.onetimesuite.com",
   ogImage: "/images/bloommeeting-home.png",
   price: 49,
   priceDisplay: "$49",
